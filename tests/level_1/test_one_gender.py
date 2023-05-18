@@ -9,5 +9,3 @@ def test_genderalize_pronounce_female():
 
 def test_genderalize_gender_other():
     assert genderalize('he', 'she', 'not male') == 'she'
-    
-    
