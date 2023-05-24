@@ -6,9 +6,10 @@ def test__solve_square_equation__discriminant_below_zero():
 
 def test__solve_square_equation__if_discriminant_equals_zero():
     assert solve_square_equation(16, -8, 1) == (0.25, 0.25)
+    assert solve_square_equation(2, 0, 0) == (0, 0)
 
 def test__solve_square_equation__if_discriminant_above_zero():
-        assert solve_square_equation(2, 5, 2) == (-2, -0.5)
+    assert solve_square_equation(2, 5, 2) == (-2, -0.5)
 
 def test__solve_square_equation__without_square_coefficient():
     assert solve_square_equation(0, 3, -5) == (1.6666666666666667, None)
