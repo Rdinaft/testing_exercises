@@ -1,11 +1,15 @@
+import pytest
 from functions.level_1.one_gender import genderalize
 
 
-def test_genderalize_pronounce_male():
-    assert genderalize('he', 'she', 'male') == 'he'
-    
-def test_genderalize_pronounce_female():
-    assert genderalize('he', 'she', 'female') == 'she'
-
-def test_genderalize_gender_other():
-    assert genderalize('he', 'she', 'not male') == 'she'
+@pytest.mark.parametrize(
+    "verb_male, verb_female, gender, expected_result",
+    [
+        ("he", "she", "male", "he"),
+        ("he", "she", "female", "she"),
+        ("he", "she", "not male", "she"),
+    ],
+    ids=["pronounce_male", "pronounce_female", "gender_other"],
+)
+def test__genderalize(verb_male, verb_female, gender, expected_result):
+    assert genderalize(verb_male, verb_female, gender) is expected_result
