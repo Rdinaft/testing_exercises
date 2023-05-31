@@ -23,7 +23,7 @@ import pytest
         "no_any_coefficient",
     ],
 )
-def test__solve_square_equation__(
+def test__solve_square_equation(
     square_coefficient, linear_coefficient, const_coefficient, expected_result
 ):
     assert (

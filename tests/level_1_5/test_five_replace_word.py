@@ -32,7 +32,7 @@ import pytest
         "case_dependancy",
     ],
 )
-def test__replace_word__case_dependancy(
+def test__replace_word(
     text, replace_from, replace_to, expected_results
 ):
     assert replace_word(text, replace_from, replace_to) == expected_results

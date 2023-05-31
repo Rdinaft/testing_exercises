@@ -46,5 +46,5 @@ def test__get_median_value__two_numbers():
         "empty_tuple_none",
     ],
 )
-def test__get_median_value__(items, expected_result):
+def test__get_median_value(items, expected_result):
     assert get_median_value(items) == expected_result

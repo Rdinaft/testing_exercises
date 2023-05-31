@@ -29,5 +29,5 @@ import pytest
         "without_good_dict",
     ],
 )
-def test__check_tweet_sentiment__(text, good_words, bad_words, expected_result):
+def test__check_tweet_sentiment(text, good_words, bad_words, expected_result):
     assert check_tweet_sentiment(text, good_words, bad_words) == expected_result

@@ -22,5 +22,5 @@ import pytest
         "without_querypart_with_sybmols",
     ],
 )
-def test__build_url__(host_name, relative_url, get_params, expected_results):
+def test__build_url(host_name, relative_url, get_params, expected_results):
     assert build_url(host_name, relative_url, get_params) == expected_results

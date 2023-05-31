@@ -29,5 +29,5 @@ import pytest
     ],
     ids=["is_valid"],
 )
-def test__parse_ineco_expense_(sms_message, bank_card, expense):
+def test__parse_ineco_expense(sms_message, bank_card, expense):
     assert parse_ineco_expense(sms_message, bank_card) == expense

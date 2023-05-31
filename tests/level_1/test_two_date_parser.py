@@ -13,5 +13,5 @@ from freezegun import freeze_time
     ],
     ids=["today", "tomorrow"],
 )
-def test__compose_datetime_from__(date_str, time_str, expected_result):
+def test__compose_datetime_from(date_str, time_str, expected_result):
     assert compose_datetime_from(date_str, time_str) == expected_result

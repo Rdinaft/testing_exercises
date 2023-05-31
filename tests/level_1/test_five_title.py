@@ -37,5 +37,5 @@ import pytest
         ("Copy of ÿ ▲  ee 書類 (A,.ÿ)", "Copy of ÿ ▲  ee 書類 (A,.ÿ) (2)"),
     ],
 )
-def test__change_copy_item__(title, expected_result):
+def test__change_copy_item(title, expected_result):
     assert change_copy_item(title) == expected_result

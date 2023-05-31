@@ -24,7 +24,7 @@ import pytest
         "without_items_with_none_default",
     ],
 )
-def test__first__(items, default, expected_result):
+def test__first(items, default, expected_result):
     assert first(items, default) == expected_result
 
 
